@@ -66,56 +66,59 @@
             background-color: rgba(236, 72, 153, 0.1);
             box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
         }
+        .page {
+            min-height: 100vh;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
 
-    <!-- 導航欄 -->
-    <nav class="bg-black/50 backdrop-blur-sm sticky top-0 z-50 border-b border-pink-500/20">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-3xl font-bebas text-pink-400 text-glow-pink tracking-widest">DRUNKLAND</a>
-            <div class="hidden md:flex space-x-8 text-gray-300">
-                <a href="#features" class="hover:text-pink-400 transition font-medium">GAME FEATURES</a>
-                <a href="#how-to-play" class="hover:text-pink-400 transition font-medium">HOW TO PLAY</a>
-                <a href="#rules" class="hover:text-pink-400 transition font-medium">RULEBOOK</a>
-                <a href="#gallery" class="hover:text-pink-400 transition font-medium">HALL OF SHAME</a>
+    <!-- 主頁內容 -->
+    <main id="main-page" class="page">
+        <!-- 導航欄 -->
+        <nav class="bg-black/50 backdrop-blur-sm sticky top-0 z-50 border-b border-pink-500/20">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="#" class="text-3xl font-bebas text-pink-400 text-glow-pink tracking-widest">DRUNKLAND</a>
+                <div class="hidden md:flex space-x-8 text-gray-300">
+                    <a href="#features" class="hover:text-pink-400 transition font-medium">GAME FEATURES</a>
+                    <a href="#how-to-play" class="hover:text-pink-400 transition font-medium">HOW TO PLAY</a>
+                    <a href="#rules" class="hover:text-pink-400 transition font-medium">RULEBOOK</a>
+                    <a href="#gallery" class="hover:text-pink-400 transition font-medium">HALL OF SHAME</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-        <!-- 手機版菜單 -->
-        <div id="mobile-menu" class="hidden md:hidden bg-black/80">
-            <div class="px-6 pb-4 pt-2">
-                <a href="#features" class="block py-2 hover:text-pink-400 transition font-medium">GAME FEATURES</a>
-                <a href="#how-to-play" class="block py-2 hover:text-pink-400 transition font-medium">HOW TO PLAY</a>
-                <a href="#rules" class="block py-2 hover:text-pink-400 transition font-medium">RULEBOOK</a>
-                <a href="#gallery" class="block py-2 hover:text-pink-400 transition font-medium">HALL OF SHAME</a>
+            <!-- 手機版菜單 -->
+            <div id="mobile-menu" class="hidden md:hidden bg-black/80">
+                <div class="px-6 pb-4 pt-2">
+                    <a href="#features" class="block py-2 hover:text-pink-400 transition font-medium">GAME FEATURES</a>
+                    <a href="#how-to-play" class="block py-2 hover:text-pink-400 transition font-medium">HOW TO PLAY</a>
+                    <a href="#rules" class="block py-2 hover:text-pink-400 transition font-medium">RULEBOOK</a>
+                    <a href="#gallery" class="block py-2 hover:text-pink-400 transition font-medium">HALL OF SHAME</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- 主視覺區 -->
-    <header id="home" class="hero-section h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="container mx-auto px-6">
-            <h1 class="text-7xl md:text-9xl font-bebas text-white text-glow-pink tracking-widest">DRUNKLAND</h1>
-            <h2 class="text-3xl md:text-5xl font-black text-blue-400 text-glow-blue mt-2">斷片鐵道</h2>
-            <p class="text-lg md:text-2xl text-gray-300 mt-6 max-w-2xl mx-auto font-medium">Next Stop: BLACKOUT. 下一站：友情終點站。</p>
-            <div class="mt-10 flex justify-center w-full">
-                <div class="flex flex-col items-center gap-6 md:flex-row md:gap-0 md:space-x-4">
+        <!-- 主視覺區 -->
+        <header id="home" class="hero-section h-screen flex items-center justify-center text-center overflow-hidden">
+            <div class="container mx-auto px-6">
+                <h1 class="text-7xl md:text-9xl font-bebas text-white text-glow-pink tracking-widest">DRUNKLAND</h1>
+                <h2 class="text-3xl md:text-5xl font-black text-blue-400 text-glow-blue mt-2">斷片鐵道</h2>
+                <p class="text-lg md:text-2xl text-gray-300 mt-6 max-w-2xl mx-auto font-medium">Next Stop: BLACKOUT. 下一站：友情終點站。</p>
+                <div class="mt-10 space-x-4">
                     <a href="#features" class="btn-primary font-bold py-3 px-8 rounded-full text-lg uppercase transition-transform transform hover:scale-105">GET YOUR TICKET</a>
                     <a href="javascript:void(0)" onclick="alert('規則書PDF下載功能建置中！')" class="btn-secondary font-bold py-3 px-8 rounded-full text-lg uppercase border-2 transition-transform transform hover:scale-105">DOWNLOAD RULEBOOK</a>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- 遊戲特色 -->
-    <section id="features" class="py-24 bg-black/20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-white">This is not just a game.</h2>
-            <p class="text-2xl text-pink-400 mb-16">It's a challenge of humanity.</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- 遊戲特色 -->
+        <section id="features" class="py-24 bg-black/20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-white">This is not just a game.</h2>
+                <p class="text-2xl text-pink-400 mb-16">It's a challenge of humanity.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
                 <!-- 特色一 -->
                 <div class="feature-card p-8 rounded-2xl">
                     <div class="bg-pink-500/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
@@ -149,100 +152,106 @@
                     <p class="text-gray-400">誰才是「最後清醒者」？向你懷疑的對象發起「意識清醒挑戰」，用最公正（也最羞辱）的方式，將他淘汰出局！</p>
                 </div>
             </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- 玩法速覽 -->
-    <section id="how-to-play" class="py-24 bg-black/30">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-white">3 Mins to Learn</h2>
-            <p class="text-2xl text-pink-400 mb-20">A Lifetime to Forget</p>
-            <div class="relative">
-                <!-- 連接線 -->
-                <div class="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-pink-500/20"></div>
-                <div class="relative grid md:grid-cols-4 gap-8 text-center">
-                    <!-- 步驟一 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-20 h-20 rounded-full bg-pink-500 text-white flex items-center justify-center text-3xl font-bold z-10 shadow-lg shadow-pink-500/40">1</div>
-                        <h3 class="text-xl font-bold mt-6 mb-2 text-white">ROLL & MOVE</h3>
-                        <p class="text-gray-400 px-4">踏上你未知的命運之旅。每一步，都可能是機會或陷阱。</p>
-                    </div>
-                    <!-- 步驟二 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-20 h-20 rounded-full bg-pink-500 text-white flex items-center justify-center text-3xl font-bold z-10 shadow-lg shadow-pink-500/40">2</div>
-                        <h3 class="text-xl font-bold mt-6 mb-2 text-white">BUILD YOUR EMPIRE</h3>
-                        <p class="text-gray-400 px-4">佔領無人酒吧，升級你的地產，收取高額「過路費」。</p>
-                    </div>
-                    <!-- 步驟三 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-20 h-20 rounded-full bg-pink-500 text-white flex items-center justify-center text-3xl font-bold z-10 shadow-lg shadow-pink-500/40">3</div>
-                        <h3 class="text-xl font-bold mt-6 mb-2 text-white">USE YOUR CARDS</h3>
-                        <p class="text-gray-400 px-4">在關鍵時刻打出卡牌，給予你的「摯友」致命一擊！</p>
-                    </div>
-                    <!-- 步驟四 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-20 h-20 rounded-full bg-pink-500 text-white flex items-center justify-center text-3xl font-bold z-10 shadow-lg shadow-pink-500/40">4</div>
-                        <h3 class="text-xl font-bold mt-6 mb-2 text-white">START A CHALLENGE</h3>
-                        <p class="text-gray-400 px-4">時機成熟時，勇敢發起「意識清醒挑戰」，親手送他出局！</p>
+        <!-- 玩法速覽 -->
+        <section id="how-to-play" class="py-24 bg-black/30">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-white">3 Mins to Learn</h2>
+                <p class="text-2xl text-pink-400 mb-20">A Lifetime to Forget</p>
+                <div class="relative">
+                    <!-- 連接線 -->
+                    <div class="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-pink-500/20"></div>
+                    <div class="relative grid md:grid-cols-4 gap-8 text-center">
+                        <!-- 步驟一 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 rounded-full bg-pink-500 text-white flex items-center justify-center text-3xl font-bold z-10 shadow-lg shadow-pink-500/40">1</div>
+                            <h3 class="text-xl font-bold mt-6 mb-2 text-white">ROLL & MOVE</h3>
+                            <p class="text-gray-400 px-4">踏上你未知的命運之旅。每一步，都可能是機會或陷阱。</p>
+                        </div>
+                        <!-- 步驟二 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 rounded-full bg-pink-500 text-white flex items-center justify-center text-3xl font-bold z-10 shadow-lg shadow-pink-500/40">2</div>
+                            <h3 class="text-xl font-bold mt-6 mb-2 text-white">BUILD YOUR EMPIRE</h3>
+                            <p class="text-gray-400 px-4">佔領無人酒吧，升級你的地產，收取高額「過路費」。</p>
+                        </div>
+                        <!-- 步驟三 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 rounded-full bg-pink-500 text-white flex items-center justify-center text-3xl font-bold z-10 shadow-lg shadow-pink-500/40">3</div>
+                            <h3 class="text-xl font-bold mt-6 mb-2 text-white">USE YOUR CARDS</h3>
+                            <p class="text-gray-400 px-4">在關鍵時刻打出卡牌，給予你的「摯友」致命一擊！</p>
+                        </div>
+                        <!-- 步驟四 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 rounded-full bg-pink-500 text-white flex items-center justify-center text-3xl font-bold z-10 shadow-lg shadow-pink-500/40">4</div>
+                            <h3 class="text-xl font-bold mt-6 mb-2 text-white">START A CHALLENGE</h3>
+                            <p class="text-gray-400 px-4">時機成熟時，勇敢發起「意識清醒挑戰」，親手送他出局！</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 規則詳解 -->
-    <section id="rules" class="py-24 bg-black/20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white">THE RULEBOOK</h2>
-                <p class="text-xl text-gray-400 mt-2">我們為你準備了最詳細的規則，也歡迎你創造自己的瘋狂玩法！</p>
-            </div>
-            <div class="max-w-4xl mx-auto bg-gray-900/50 rounded-2xl p-4 md:p-8 border border-blue-500/20">
-                <!-- Tabs -->
-                <div class="flex justify-center border-b border-gray-700 mb-8 space-x-2 md:space-x-8">
-                    <button class="tab-btn active text-lg font-medium py-3 px-2" data-tab="tab1">遊戲設置</button>
-                    <button class="tab-btn text-lg font-medium py-3 px-2" data-tab="tab2">格子詳解</button>
-                    <button class="tab-btn text-lg font-medium py-3 px-2" data-tab="tab3">卡牌大全</button>
-                    <button class="tab-btn text-lg font-medium py-3 px-2" data-tab="tab4">勝利條件</button>
+        <!-- 規則詳解 -->
+        <section id="rules" class="py-24 bg-black/20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">THE RULEBOOK</h2>
+                    <p class="text-xl text-gray-400 mt-2">我們為你準備了最詳細的規則，也歡迎你創造自己的瘋狂玩法！</p>
                 </div>
+                <div class="max-w-4xl mx-auto bg-gray-900/50 rounded-2xl p-4 md:p-8 border border-blue-500/20">
+                    <!-- Tabs -->
+                    <div class="flex justify-center border-b border-gray-700 mb-8 space-x-2 md:space-x-8">
+                        <button class="tab-btn active text-lg font-medium py-3 px-2" data-tab="tab1">遊戲設置</button>
+                        <button class="tab-btn text-lg font-medium py-3 px-2" data-tab="tab2">格子詳解</button>
+                        <button class="tab-btn text-lg font-medium py-3 px-2" data-tab="tab3">卡牌大全</button>
+                        <button class="tab-btn text-lg font-medium py-3 px-2" data-tab="tab4">勝利條件</button>
+                    </div>
 
-                <!-- Tab Content -->
-                <div id="tab-content" class="text-gray-300 leading-relaxed">
-                    <div id="tab1" class="tab-pane active">
-                        <h3 class="text-2xl font-bold text-pink-400 mb-4">遊戲設置與流程</h3>
-                        <p class="mb-2"><strong class="text-white">遊戲配件：</strong> 遊戲棋盤、骰子、玩家棋子、酒吧佔領卡、機會卡、懲罰卡、老大卡、演講題目卡、意識挑戰卡、酒吧升級標記。</p>
-                        <p class="mb-2"><strong class="text-white">遊戲設置：</strong> 將棋盤放置中央，分類洗勻卡牌。每位玩家選擇棋子置於起始點，並發放一張機會卡作為手牌。選一位最想喝酒的玩家開始。</p>
-                        <p><strong class="text-white">遊戲流程：</strong> 輪到你的回合時，擲骰移動，並執行停留格子的指令。執行完畢後，回合結束。</p>
-                    </div>
-                    <div id="tab2" class="tab-pane hidden">
-                        <h3 class="text-2xl font-bold text-pink-400 mb-4">地圖格子詳解</h3>
-                        <ul class="list-disc list-inside space-y-2">
-                            <li><strong class="text-white">起始點：</strong> 經過或停留可抽一張機會卡。</li>
-                            <li><strong class="text-white">耍廢島：</strong> 需透過「付錢保釋」、「才藝換宿」或「等待時機」才能離開。</li>
-                            <li><strong class="text-white">當老大：</strong> 抽取老大卡，對其他玩家下達指令。</li>
-                            <li><strong class="text-white">酒吧格：</strong> 可佔領、付過路費或升級。</li>
-                            <li><strong class="text-white">機會/懲罰格：</strong> 抽取對應卡牌。</li>
-                            <li><strong class="text-white">飛行：</strong> 移動到地圖上任一格。</li>
-                        </ul>
-                    </div>
-                    <div id="tab3" class="tab-pane hidden">
-                        <h3 class="text-2xl font-bold text-pink-400 mb-4">卡牌大全</h3>
-                        <p class="mb-2"><strong class="text-white">機會卡：</strong> 包含「絕對防禦」、「王權在手」、「嫁禍他人」等對自己有利的功能牌。</p>
-                        <p class="mb-2"><strong class="text-white">懲罰卡：</strong> 包含「公杯調酒師」、「社會性死亡」、「手機朗讀」等讓場面失控的事件。</p>
-                        <p><strong class="text-white">老大卡：</strong> 包含「欽點倒楣鬼」、「天地交換」、「臨時規則」等掌握全場的權力。</p>
-                    </div>
-                    <div id="tab4" class="tab-pane hidden">
-                        <h3 class="text-2xl font-bold text-pink-400 mb-4">勝利與特殊規則</h3>
-                        <p class="mb-2"><strong class="text-white">意識清醒挑戰：</strong> 當你覺得某玩家快不行時，可放棄你的回合對他發起挑戰。抽一張「意識挑戰卡」，對方在10秒內答對則挑戰失敗，你罰喝三杯；答錯或超時則對方出局。</p>
-                        <p class="mb-2"><strong class="text-white">最終勝利：</strong> 當場上只剩下一位玩家時，該玩家獲得最終勝利！</p>
-                        <p><strong class="text-white">特殊規則：</strong> 包含「酒吧升級」與「連體嬰分手條件」等增加遊戲深度的規則。</p>
+                    <!-- Tab Content -->
+                    <div id="tab-content" class="text-gray-300 leading-relaxed">
+                        <div id="tab1" class="tab-pane active">
+                            <h3 class="text-2xl font-bold text-pink-400 mb-4">遊戲設置與流程</h3>
+                            <p class="mb-2"><strong class="text-white">遊戲配件：</strong> 遊戲棋盤、骰子、玩家棋子、酒吧佔領卡、機會卡、懲罰卡、老大卡、演講題目卡、意識挑戰卡、酒吧升級標記。</p>
+                            <p class="mb-2"><strong class="text-white">遊戲設置：</strong> 將棋盤放置中央，分類洗勻卡牌。每位玩家選擇棋子置於起始點，並發放一張機會卡作為手牌。選一位最想喝酒的玩家開始。</p>
+                            <p><strong class="text-white">遊戲流程：</strong> 輪到你的回合時，擲骰移動，並執行停留格子的指令。執行完畢後，回合結束。</p>
+                        </div>
+                        <div id="tab2" class="tab-pane hidden">
+                            <h3 class="text-2xl font-bold text-pink-400 mb-4">地圖格子詳解</h3>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong class="text-white">起始點：</strong> 經過或停留可抽一張機會卡。</li>
+                                <li><strong class="text-white">耍廢島：</strong> 需透過「付錢保釋」、「才藝換宿」或「等待時機」才能離開。</li>
+                                <li><strong class="text-white">當老大：</strong> 抽取老大卡，對其他玩家下達指令。</li>
+                                <li><strong class="text-white">酒吧格：</strong> 可佔領、付過路費或升級。</li>
+                                <li><strong class="text-white">機會/懲罰格：</strong> 抽取對應卡牌。</li>
+                                <li><strong class="text-white">飛行：</strong> 移動到地圖上任一格。</li>
+                            </ul>
+                        </div>
+                        <div id="tab3" class="tab-pane hidden">
+                            <h3 class="text-2xl font-bold text-pink-400 mb-4">卡牌大全</h3>
+                            <p class="mb-2">想知道每張卡牌的詳細內容嗎？點擊下方連結，探索所有可能毀滅你友情的邪惡卡牌！</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                <a href="#" class="card-link block p-4 bg-black/30 rounded-lg hover:bg-pink-500/20 transition" data-target="bars-page">酒吧佔領卡</a>
+                                <a href="#" class="card-link block p-4 bg-black/30 rounded-lg hover:bg-pink-500/20 transition" data-target="opportunity-page">機會卡</a>
+                                <a href="#" class="card-link block p-4 bg-black/30 rounded-lg hover:bg-pink-500/20 transition" data-target="penalty-page">懲罰卡</a>
+                                <a href="#" class="card-link block p-4 bg-black/30 rounded-lg hover:bg-pink-500/20 transition" data-target="boss-page">老大卡</a>
+                                <a href="#" class="card-link block p-4 bg-black/30 rounded-lg hover:bg-pink-500/20 transition" data-target="speech-page">演講題目卡</a>
+                                <a href="#" class="card-link block p-4 bg-black/30 rounded-lg hover:bg-pink-500/20 transition" data-target="challenge-page">意識挑戰卡</a>
+                            </div>
+                        </div>
+                        <div id="tab4" class="tab-pane hidden">
+                            <h3 class="text-2xl font-bold text-pink-400 mb-4">勝利與特殊規則</h3>
+                            <p class="mb-2"><strong class="text-white">意識清醒挑戰：</strong> 當你覺得某玩家快不行時，可放棄你的回合對他發起挑戰。抽一張「意識挑戰卡」，對方在10秒內答對則挑戰失敗，你罰喝三杯；答錯或超時則對方出局。</p>
+                            <p class="mb-2"><strong class="text-white">最終勝利：</strong> 當場上只剩下一位玩家時，該玩家獲得最終勝利！</p>
+                            <p><strong class="text-white">特殊規則：</strong> 包含「酒吧升級」與「連體嬰分手條件」等增加遊戲深度的規則。</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 派對實況 -->
+        <!-- 派對實況 -->
     <section id="gallery" class="py-24 bg-black/30">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold text-white">HALL OF SHAME / FAME</h2>
@@ -268,44 +277,150 @@
         </div>
     </section>
 
-    <!-- 頁尾 -->
-    <footer class="bg-black/50 border-t border-pink-500/10">
-        <div class="container mx-auto px-6 py-12 text-center text-gray-500">
-            <h3 class="text-2xl font-bold text-pink-400 mb-2">DRINK RESPONSIBLY</h3>
-            <p class="text-base">遊戲的目的是創造回憶，不是失憶。請勿酒駕，平安回家。</p>
-            <p class="text-sm mt-6">&copy; 2025 DRUNKLAND COMMITTEE. All Rights Reserved.</p>
-        </div>
-    </footer>
+        <!-- 頁尾 -->
+        <footer class="bg-black/50 border-t border-pink-500/10">
+            <div class="container mx-auto px-6 py-12 text-center text-gray-500">
+                <h3 class="text-2xl font-bold text-pink-400 mb-2">DRINK RESPONSIBLY</h3>
+                <p class="text-base">遊戲的目的是創造回憶，不是失憶。請勿酒駕，平安回家。</p>
+                <p class="text-sm mt-6">&copy; 2025 DRUNKLAND COMMITTEE. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- 卡牌頁面 (預設隱藏) -->
+    <div id="card-pages-container">
+        <!-- 酒吧佔領卡頁面 -->
+        <section id="bars-page" class="page hidden bg-black/20 flex flex-col items-center justify-center text-center p-6">
+            <h1 class="text-5xl font-black text-blue-400 text-glow-blue">酒吧佔領卡</h1>
+            <p class="text-xl text-gray-300 mt-4">BAR CARDS</p>
+            <div class="mt-8 text-2xl text-gray-400 max-w-2xl">
+                <p>內容待更新...</p>
+                <p class="mt-2">Content to be updated...</p>
+            </div>
+            <button class="back-to-main btn-secondary font-bold py-3 px-8 rounded-full text-lg uppercase border-2 transition-transform transform hover:scale-105 mt-12">返回主頁 (BACK)</button>
+        </section>
+
+        <!-- 機會卡頁面 -->
+        <section id="opportunity-page" class="page hidden bg-black/20 flex flex-col items-center justify-center text-center p-6">
+            <h1 class="text-5xl font-black text-blue-400 text-glow-blue">機會卡</h1>
+            <p class="text-xl text-gray-300 mt-4">OPPORTUNITY CARDS</p>
+            <div class="mt-8 text-2xl text-gray-400 max-w-2xl">
+                <p>內容待更新...</p>
+                <p class="mt-2">Content to be updated...</p>
+            </div>
+            <button class="back-to-main btn-secondary font-bold py-3 px-8 rounded-full text-lg uppercase border-2 transition-transform transform hover:scale-105 mt-12">返回主頁 (BACK)</button>
+        </section>
+
+        <!-- 懲罰卡頁面 -->
+        <section id="penalty-page" class="page hidden bg-black/20 flex flex-col items-center justify-center text-center p-6">
+            <h1 class="text-5xl font-black text-blue-400 text-glow-blue">懲罰卡</h1>
+            <p class="text-xl text-gray-300 mt-4">PENALTY CARDS</p>
+            <div class="mt-8 text-2xl text-gray-400 max-w-2xl">
+                <p>內容待更新...</p>
+                <p class="mt-2">Content to be updated...</p>
+            </div>
+            <button class="back-to-main btn-secondary font-bold py-3 px-8 rounded-full text-lg uppercase border-2 transition-transform transform hover:scale-105 mt-12">返回主頁 (BACK)</button>
+        </section>
+
+        <!-- 老大卡頁面 -->
+        <section id="boss-page" class="page hidden bg-black/20 flex flex-col items-center justify-center text-center p-6">
+            <h1 class="text-5xl font-black text-blue-400 text-glow-blue">老大卡</h1>
+            <p class="text-xl text-gray-300 mt-4">BOSS CARDS</p>
+            <div class="mt-8 text-2xl text-gray-400 max-w-2xl">
+                <p>內容待更新...</p>
+                <p class="mt-2">Content to be updated...</p>
+            </div>
+            <button class="back-to-main btn-secondary font-bold py-3 px-8 rounded-full text-lg uppercase border-2 transition-transform transform hover:scale-105 mt-12">返回主頁 (BACK)</button>
+        </section>
+
+        <!-- 演講題目卡頁面 -->
+        <section id="speech-page" class="page hidden bg-black/20 flex flex-col items-center justify-center text-center p-6">
+            <h1 class="text-5xl font-black text-blue-400 text-glow-blue">演講題目卡</h1>
+            <p class="text-xl text-gray-300 mt-4">SPEECH CARDS</p>
+            <div class="mt-8 text-2xl text-gray-400 max-w-2xl">
+                <p>內容待更新...</p>
+                <p class="mt-2">Content to be updated...</p>
+            </div>
+            <button class="back-to-main btn-secondary font-bold py-3 px-8 rounded-full text-lg uppercase border-2 transition-transform transform hover:scale-105 mt-12">返回主頁 (BACK)</button>
+        </section>
+
+        <!-- 意識挑戰卡頁面 -->
+        <section id="challenge-page" class="page hidden bg-black/20 flex flex-col items-center justify-center text-center p-6">
+            <h1 class="text-5xl font-black text-blue-400 text-glow-blue">意識挑戰卡</h1>
+            <p class="text-xl text-gray-300 mt-4">CHALLENGE CARDS</p>
+            <div class="mt-8 text-2xl text-gray-400 max-w-2xl">
+                <p>內容待更新...</p>
+                <p class="mt-2">Content to be updated...</p>
+            </div>
+            <button class="back-to-main btn-secondary font-bold py-3 px-8 rounded-full text-lg uppercase border-2 transition-transform transform hover:scale-105 mt-12">返回主頁 (BACK)</button>
+        </section>
+    </div>
 
     <script>
-        // 規則詳解的Tabs切換功能
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const tabPanes = document.querySelectorAll('.tab-pane');
+        // --- 主頁邏輯 ---
+        const setupMainPage = () => {
+            // 規則詳解的Tabs切換功能
+            const tabButtons = document.querySelectorAll('#main-page .tab-btn');
+            const tabPanes = document.querySelectorAll('#main-page .tab-pane');
 
-        tabButtons.forEach(button => {
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    tabPanes.forEach(pane => pane.classList.add('hidden'));
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.remove('hidden');
+                });
+            });
+
+            // 手機版菜單開關
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        };
+
+        // --- 頁面切換邏輯 ---
+        const mainPage = document.getElementById('main-page');
+        const cardPageLinks = document.querySelectorAll('.card-link');
+        const backButtons = document.querySelectorAll('.back-to-main');
+        const allPages = document.querySelectorAll('.page');
+
+        const showPage = (pageId) => {
+            allPages.forEach(p => p.classList.add('hidden'));
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            }
+        };
+
+        cardPageLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetPageId = link.getAttribute('data-target');
+                showPage(targetPageId);
+            });
+        });
+
+        backButtons.forEach(button => {
             button.addEventListener('click', () => {
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                tabPanes.forEach(pane => pane.classList.add('hidden'));
-                const tabId = button.getAttribute('data-tab');
-                document.getElementById(tabId).classList.remove('hidden');
+                showPage('main-page');
             });
         });
 
-        // 手機版菜單開關
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        // 初始化主頁功能
+        setupMainPage();
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
     </script>
 
 </body>
